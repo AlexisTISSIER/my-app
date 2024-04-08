@@ -1,33 +1,32 @@
 import React from 'react';
 
+
 function Header() {
   return (
-    <nav>
+    <nav className="bg-gray-800 py-4">
+    <div className="container mx-auto flex items-center justify-between">
+      {}
       <div>
-        <h1 className="text-3xl font-bold underline text-center py-10">
-          Alexis TISSIER
-        </h1>
-        <img src="https://actustream.fr/img/clubs/esport/karmine-corp.png" alt="image-mex" />
+        <img className="h-8" src="https://cdn.pixabay.com/photo/2018/03/26/14/18/man-
+3262834_960_720.png" alt="Logo" />
       </div>
-      <ul className="flex justify-center">
-        <li className="mr-10">
-          <a href="/App.js" className="text-blue-500">
-            App.js
-          </a>
+
+      {}
+      <ul className="flex items-center space-x-4">
+        <li>
+          <a href="#" className="text-white hover:text-gray-300">Accueil</a>
         </li>
-        <li className="mr-10">
-          <a href='/Header.jsx' className="text-blue-500">
-            Header
-          </a>
+        <li>
+          <a href="#" className="text-white hover:text-gray-300">Projets</a>
         </li>
-        <li className="mr-10">
-          <a href="#contact" className="text-blue-500">
-            Autre
-          </a>
+        <li>
+          <a href="#" className="text-white hover:text-gray-300">Contact</a>
         </li>
       </ul>
-    </nav>
-  );
+    </div>
+  </nav>
+);
 }
+
 
 export default Header;
