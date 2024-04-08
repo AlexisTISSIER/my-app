@@ -3,6 +3,7 @@ import React from 'react';
 
 function Header() {
   return (
+    <header>
     <nav className="bg-gray-800 py-4">
     <div className="container mx-auto flex items-center justify-between">
       {}
@@ -25,6 +26,7 @@ function Header() {
       </ul>
     </div>
   </nav>
+  </header>
 );
 }
 
