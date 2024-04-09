@@ -15,7 +15,7 @@ function App() {
         <Header />
         <Layout>
           <Route exact path="/" component={Home} />
-          <Route path="/Dishdetails/:slug" component={Dishdetails} />
+          <Route path="/plat/:slug" component={Dishdetails} />
           <Route path="/about" component={About} />
           <Route component={NotFound} />
         </Layout>
