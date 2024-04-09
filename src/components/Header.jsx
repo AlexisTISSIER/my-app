@@ -1,34 +1,33 @@
 import React from 'react';
 
-
 function Header() {
   return (
     <header>
-    <nav className="">
-    <div className="">
-      {}
-      <div>
-        <img className="" src="https://cdn.pixabay.com/photo/2018/03/26/14/18/man-
-3262834_960_720.png" alt="Logo" />
-      </div>
-
-      {}
-      <ul className="">
-        <li>
-          <a href="/" className="">Accueil</a>
-        </li>
-        <li>
-          <a href="/Projets" className="">Projets</a>
-        </li>
-        <li>
-          <a href="/Contact" className="">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  </header>
-);
+      <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-light item-center ">
+        <div className="container  ">
+          <a className="navbar-brand " href="/">
+            <img className="logo" src="https://cdn.pixabay.com/photo/2018/03/26/14/18/man-3262834_960_720.png" alt="Logo" style={{ width: '50px', height: '50px' }} />
+          </a>
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <a className="nav-link" href="/">Accueil</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/Projets">Projets</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/Contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+  );
 }
-
 
 export default Header;

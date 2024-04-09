@@ -2,10 +2,12 @@ import React from 'react';
 
 const Card = ({ img, name, price }) => {
     return (
-      <div className="plat">
-        <img src={img} alt={name} />
-        <h2>{name}</h2>
-        <p>Prix: {price}€</p>
+      <div className="Card" style={{ width: '18rem', }} >
+        <img src={img} className="card-img-top" alt={name} />
+        <div className="card-body">
+        <h2 className="card-title">{name}</h2>
+        <p className="card-text">Prix: {price}€</p>
+        </div>
       </div>
     );
   }
