@@ -1,10 +1,10 @@
 
 import React from 'react';
-
+import './Stylefooter.css';
 function Footer() {
   return (
-    <footer className="d-flex justify-content-center">
-      <p className="">© Copyright Mexican Food 2024</p>
+    <footer className="footer">
+      <p>© Copyright Mexican Food 2024</p>
     </footer>
   );
 }
