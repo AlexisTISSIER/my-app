@@ -1,12 +1,27 @@
 import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Testimonial from './components/Testimonial';
+import Card from './components/Card';
 function App() {
   return (
     <div>
       <Header /> {}
-      <Testimonial /> {}
+      <main>
+        <Card
+        Price=""
+        name=""
+        img="" />
+
+        <Card
+        Price=""
+        name=""
+        img="" />
+
+        <Card
+        Price=""
+        name=""
+        img="" />
+      </main>
       <Footer /> {}
     </div>
   );
