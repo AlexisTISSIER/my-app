@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'; 
 import logo from '../assets/images/Logo.webp';
 import { Image } from 'react-bootstrap';
-import './header.css';
+import '../assets/styles/Header.css';
 
 
 function Header() {
