@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../assets/logo.webp';
 
 function Header() {
   return (
@@ -6,7 +7,7 @@ function Header() {
       <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-light item-center ">
         <div className="container  ">
           <a className="navbar-brand " href="/">
-            <img className="logo" src="https://cdn.pixabay.com/photo/2018/03/26/14/18/man-3262834_960_720.png" alt="Logo" style={{ width: '50px', height: '50px' }} />
+            <img className="logo" src={logo} alt="Logo" style={{ width: '50px', height: '50px' }} /> {}
           </a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
