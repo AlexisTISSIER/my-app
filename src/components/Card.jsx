@@ -4,7 +4,7 @@ import '../assets/styles/Card.css';
 
 const Card = ({ img, name, price }) => {
   return (
-    <BootstrapCard style={{ width: '18rem' }}>
+    <BootstrapCard className="custom-card">
       <BootstrapCard.Img variant="top" src={img} alt={name} />
       <BootstrapCard.Body>
         <BootstrapCard.Title>{name}</BootstrapCard.Title>
