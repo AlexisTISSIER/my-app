@@ -3,11 +3,11 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './components/Home';
+import Home from './pages/Home';
 import Layout from './components/Layout';
 import Dishdetails from './components/Dishdetails'; 
 import NotFound from './components/NotFound';
-import About from './components/About';
+import About from './pages/About';
 
 function App() {
   return (
