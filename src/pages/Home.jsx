@@ -3,14 +3,10 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Card from '../components/Card';
 import { NavLink } from 'react-router-dom';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 const Home = () => {
   return (
     <Container>
-      <Header>
-      </Header>
       <main>
       <Row>
         <Col>
@@ -42,8 +38,6 @@ const Home = () => {
         </Col>
       </Row>
       </main>
-      <Footer>
-      </Footer>
     </Container>
   );
 }
