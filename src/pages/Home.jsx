@@ -32,7 +32,6 @@ const Home = () => {
     <div>
       <Container>
         <Row>
-          {}
           {dishes.map((dish) => (
             <Col key={dish.slug}>
               <Card
