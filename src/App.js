@@ -10,14 +10,14 @@ import About from './pages/About';
 
 function App() {
   return (
-      <Layout>
+      <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/plat/:slug" element={<Dishdetails />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </Layout>
+      </div>
   );
 }
 
