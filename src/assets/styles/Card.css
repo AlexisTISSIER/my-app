@@ -18,7 +18,7 @@ main {
     object-fit: cover; 
   }
 
-  .badge-new {
+.badge-new {
     position: absolute;
     top: 10px;
     right: 10px;

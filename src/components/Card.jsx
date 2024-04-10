@@ -6,7 +6,7 @@ import { Badge } from 'react-bootstrap';
 
 const Card = ({ img, name, price, slug, isNew }) => { 
   return (
-    <Link to={slug}>
+    <Link to={'plat/'+slug}>
       <BootstrapCard className="custom-card">
         {isNew && <Badge variant="info" className="badge-new">Nouveau</Badge>}  
         <BootstrapCard.Img variant="top" src={img} alt={name} />
