@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Dishdetails from './pages/Dishdetails'; 
-import NotFound from './components/NotFound';
+import NotFound from './pages/NotFound';
 import About from './pages/About';
 import Layout from './components/Layout';
 
