@@ -3,6 +3,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Row } from 'react-bootstrap';
+
 const Dishdetails = () => {
   const { slug } = useParams();
   return (
