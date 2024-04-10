@@ -10,8 +10,6 @@ import About from './pages/About';
 
 function App() {
   return (
-    <div>
-      <Header />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -20,8 +18,6 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
-      <Footer />
-    </div>
   );
 }
 

@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <Container>
-      <main>
       <Row>
         <Col>
           <Link to="/plat/tacos-a-l-unite"> {}
@@ -37,7 +36,6 @@ const Home = () => {
           </Link>
         </Col>
       </Row>
-      </main>
     </Container>
   );
 }
