@@ -8,14 +8,13 @@ const Home = () => {
   const [dishes, setDishes] = useState([]);
 
   useEffect(() => {
-    setDishes(dishesData);
-  }, []);
+    const filteredDishes = showNewOnly ? dishesData.filter(dish => dish.isNew) : dishesData;
+    setDishes(filteredDishes);
+  }, [showNewOnly]);
 
   const handleShowNewOnly = () => {
     setShowNewOnly(!showNewOnly);
   };
-
-  const filteredDishes = showNewOnly ? dishes.filter(dish => dish.isNew) : dishes;
 
   return (
     <div>
@@ -24,7 +23,7 @@ const Home = () => {
           {showNewOnly ? "Voir tous les plats" : "Nouveautés uniquement"}
         </Button>
         <Row>
-          {filteredDishes.map((dish, index) => (
+          {dishes.map((dish, index) => (
             <Col key={index}>
               <Card
                 slug={dish.slug}
