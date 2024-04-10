@@ -18,7 +18,7 @@ function App() {
               <Route index element={<Home />} />  
               <Route path="/plat/:slug" element={<Dishdetails/>}/>
               <Route path="/about" component={About} />
-              <Route component={NotFound} />
+              <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
         </Layout>
