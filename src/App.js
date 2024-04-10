@@ -4,15 +4,18 @@ import Home from './pages/Home';
 import Dishdetails from './pages/Dishdetails'; 
 import NotFound from './components/NotFound';
 import About from './pages/About';
+import Layout from './components/Layout';
 
 function App() {
   return (
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/plat/:slug" element={<Dishdetails />} />
-          <Route path="/about" element={<About />} />
-          <Route path="*" element={<NotFound />} />
+          <Route element={<Layout/>}>
+            <Route path="/" element={<Home />} />
+            <Route path="/plat/:slug" element={<Dishdetails />} />
+            <Route path="/about" element={<About />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
         </Routes>
       </div>
   );
