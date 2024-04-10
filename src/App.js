@@ -14,7 +14,7 @@ function App() {
       <div>
         <Header />
         <Layout>
-          <Route exact path="/" component={Home} />
+          <Route index path="/" component={Home} />
           <Route path="/plat/:slug" element={<Dishdetails/>}/>
           <Route path="/about" component={About} />
           <Route component={NotFound} />
