@@ -14,10 +14,12 @@ function App() {
         <Header />
         <Layout>
           <Routes>
-            <Route index path="/" component={Home} />
-            <Route path="/plat/:slug" element={<Dishdetails/>}/>
-            <Route path="/about" component={About} />
-            <Route component={NotFound} />
+            <Route element={<Layout />}>  
+              <Route index element={<Home />} />  
+              <Route path="/plat/:slug" element={<Dishdetails/>}/>
+              <Route path="/about" component={About} />
+              <Route component={NotFound} />
+            </Route>
           </Routes>
         </Layout>
         <Footer />
