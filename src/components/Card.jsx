@@ -3,9 +3,9 @@ import { Card as BootstrapCard } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import '../assets/styles/Card.css';
 
-const Card = ({ img, name, price, to }) => { 
+const Card = ({ img, name, price, slug }) => { 
   return (
-    <Link to={to}> {}
+    <Link to={slug}>
       <BootstrapCard className="custom-card">
         <BootstrapCard.Img variant="top" src={img} alt={name} />
         <BootstrapCard.Body>
@@ -18,4 +18,3 @@ const Card = ({ img, name, price, to }) => {
 }
 
 export default Card;
-
