@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import logo from '../assets/images/Logo.webp';
 import { Image } from 'react-bootstrap';
@@ -17,10 +18,10 @@ function Header() {
           <Navbar.Collapse id="navbarSupportedContent">
             <Nav className="ml-auto">
               <Nav.Item>
-                <Nav.Link as={Link} to="/">Accueil</Nav.Link>
+                <NavLink to="/">Accueil</NavLink>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link as={Link} to="/about">A propos</Nav.Link>
+                <NavLink to="/about">A propos</NavLink>
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>
