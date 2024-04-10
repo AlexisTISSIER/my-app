@@ -4,16 +4,16 @@ img {
     width: auto;
   }
  
-main {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
+.text {
+  text-decoration: none;
+}
 .custom-card {
+    text-decoration: none;
     margin-bottom: 20px;
   }
 
 .custom-card .card-img-top {
+  text-decoration: none;
     height: 200px; 
     object-fit: cover; 
   }

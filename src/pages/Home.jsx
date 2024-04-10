@@ -1,8 +1,10 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import Card from '../components/Card';
 
 const Home = () => {
+  const [showNewOnly, setShowNewOnly] = useState(false);
+
   const dishes = [
     {
       slug: "tacos-a-l-unite",
@@ -26,13 +28,21 @@ const Home = () => {
       isNew: false
     }
   ];
-  
+
+  const handleShowNewOnly = () => {
+    setShowNewOnly(!showNewOnly);
+  };
+
+  const filteredDishes = showNewOnly ? dishes.filter(dish => dish.isNew) : dishes;
 
   return (
     <div>
       <Container>
+        <Button onClick={handleShowNewOnly} className="mb-3">
+          {showNewOnly ? "Voir tous les plats" : "Nouveautés uniquement"}
+        </Button>
         <Row>
-          {dishes.map((dish, index) => (
+          {filteredDishes.map((dish, index) => (
             <Col key={index}>
               <Card
                 slug={dish.slug}
