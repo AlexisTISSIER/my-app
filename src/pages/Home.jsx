@@ -1,33 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import Card from '../components/Card';
+import dishesData from '../datas/dishes.json';
 
 const Home = () => {
   const [showNewOnly, setShowNewOnly] = useState(false);
+  const [dishes, setDishes] = useState([]);
 
-  const dishes = [
-    {
-      slug: "tacos-a-l-unite",
-      price: 3,
-      name: "Tacos à l’unité",
-      img: "https://cdn.pixabay.com/photo/2016/08/23/08/53/tacos-1613795_960_720.jpg",
-      isNew: true 
-    },
-    {
-      slug: "enchiladas",
-      price: 12,
-      name: "Enchiladas",
-      img: "https://cdn.pixabay.com/photo/2014/01/14/22/13/mexican-245240_960_720.jpg",
-      isNew: false
-    },
-    {
-      slug: "mole-poblano",
-      price: 15,
-      name: "Mole poblano",
-      img: "https://cdn.pixabay.com/photo/2021/02/04/03/57/mole-5980185_960_720.jpg",
-      isNew: false
-    }
-  ];
+  useEffect(() => {
+    setDishes(dishesData);
+  }, []);
 
   const handleShowNewOnly = () => {
     setShowNewOnly(!showNewOnly);
