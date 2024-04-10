@@ -3,7 +3,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import Card from '../components/Card';
 import dishesData from '../datas/dishes.json';
 
-const Home = () => {
+const Home = ({ addToCart }) => {
   const [showNewOnly, setShowNewOnly] = useState(false);
   const [dishes, setDishes] = useState([]);
 
@@ -15,6 +15,8 @@ const Home = () => {
   const handleShowNewOnly = () => {
     setShowNewOnly(!showNewOnly);
   };
+
+  
 
   return (
     <div>

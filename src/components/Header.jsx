@@ -26,6 +26,9 @@ function Header() {
               <Nav.Item>
                 <NavLink className="nav-link" to="/about">A propos</NavLink>
               </Nav.Item>
+              <Nav.Item>
+                <NavLink className="nav-link" to="/cart">Panier</NavLink>
+              </Nav.Item>
             </Nav>
           </Navbar.Collapse>
         </Container>
