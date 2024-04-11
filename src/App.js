@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
@@ -9,21 +10,23 @@ import Cart from './pages/Cart';
 
 function App() {
   const [cart, setCart] = useState([]);
-  const addToCart = (dish) => {
-    setCart([...cart, dish]);
+
+  const addToCart = (itemToAdd) => {
+    setCart([...cart, itemToAdd]);
   };
+
   return (
-      <div className="App">
-        <Routes>
-          <Route element={<Layout cart={cart}/>}>
-            <Route path="/" element={<Home />} />
-            <Route path="/plat/:slug" element={<Dishdetails addToCart={addToCart} />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
-        </Routes>
-      </div>
+    <div className="App">
+      <Routes>
+        <Route element={<Layout cart={cart}/>}>
+          <Route path="/" element={<Home addToCart={addToCart} />} />
+          <Route path="/plat/:slug" element={<Dishdetails addToCart={addToCart} />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/cart" element={<Cart cart={cart} />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </div>
   );
 }
 
