@@ -5,7 +5,8 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import logo from '../assets/images/Logo.webp';
 import { Image } from 'react-bootstrap';
 import '../assets/styles/Header.css';
-import { CartContext } from '../utils/context/CartContext';
+import {CartContext} from '../utils/context/CartContext';
+
 
 function Header() {
   const { cart } = useContext(CartContext);
