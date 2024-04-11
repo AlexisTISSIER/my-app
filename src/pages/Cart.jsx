@@ -1,23 +1,35 @@
+import React, { useContext } from 'react';
 import { Container, Table } from 'react-bootstrap';
+import { CartContext } from '../utils/context/CartContext';
 
-const Cart = ({ cart }) => {
+const Cart = () => {
+    const { cart } = useContext(CartContext);
+
+    const columns = cart.map((item, index) => (
+        <td key={index}>
+            <img src={item.img} alt={item.name} />
+            <h3>{item.name}</h3>
+            <p>Prix: {item.price}€</p>
+            <p>Quantité: {item.quantity}</p>
+            <p>Prix total: {item.price * item.quantity}€</p>
+        </td>
+    ));
+
     return (
         <Container>
             <h1>Panier</h1>
             <Table striped bordered hover>
                 <thead>
                     <tr>
-                        <th>Nom</th>
-                        <th>Prix</th>
+                        {cart.map((item, index) => (
+                            <th key={index}>{item.name}</th>
+                        ))}
                     </tr>
                 </thead>
                 <tbody>
-                    {cart && cart.map((item, index) => (
-                        <tr key={index}>
-                            <td>{item.name}</td>
-                            <td>{item.price}</td>
-                        </tr>
-                    ))}
+                    <tr>
+                        {columns}
+                    </tr>
                 </tbody>
             </Table>
         </Container>

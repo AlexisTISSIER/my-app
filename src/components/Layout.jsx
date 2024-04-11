@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
+import { CartContext } from "../utils/context/CartContext";
 
-const Layout = ({cart}) => {
+const Layout = () => {
+  const { cart } = useContext(CartContext);
   return (
     <>
       <Header cart={cart}/>
@@ -13,5 +15,6 @@ const Layout = ({cart}) => {
       <Footer />
     </>
   );
-  }
+}
+
 export default Layout;

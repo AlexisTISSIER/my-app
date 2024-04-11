@@ -1,35 +1,42 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Row, Button } from 'react-bootstrap';
 import dishesData from '../datas/dishes.json';
 import NotFound from './NotFound';
-import '../assets/styles/Card.css';
+import { CartContext } from "../utils/context/CartContext.jsx";
 
-const Dishdetails = ({ addToCart }) => {
+const Dishdetails = () => {
   const { slug } = useParams();
-  const [dish, setDish] = useState(null);
+  const { addToCart } = useContext(CartContext);
 
-  useEffect(() => {
-    const selectedDish = dishesData.find(dish => dish.slug === slug);
-    setDish(selectedDish);
-  }, [slug]); 
+  console.log("Slug actuel :", slug);
+
+  const selectedDish = dishesData.find(dish => dish.slug === slug);
+
+  console.log("Plat sélectionné :", selectedDish);
+
+  const handleAddToCart = () => {
+    if (selectedDish) {
+      addToCart(selectedDish);
+    }
+  };
 
   return (
     <Container>
       <Row>
-        {dish ? (
+        {selectedDish ? (
           <>
             <div className="dishdetails">
               <div>
-                <h1>{dish.name}</h1>
-                <p>Prix: {dish.price}€</p>
-                <p>{dish.description}</p>
-                <Button variant="primary" onClick={() => addToCart(dish)} className="mb-3"> 
+                <h1>{selectedDish.name}</h1>
+                <p>Prix: {selectedDish.price}€</p>
+                <p>{selectedDish.description}</p>
+                <Button variant="primary" onClick={handleAddToCart} className="mb-3"> 
                   Ajouter au panier
                 </Button>
               </div>
               <div>
-                <img src={dish.img} alt={dish.name} />
+                <img src={selectedDish.img} alt={selectedDish.name} />
               </div>
             </div>
           </>

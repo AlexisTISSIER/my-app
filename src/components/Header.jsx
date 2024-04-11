@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import logo from '../assets/images/Logo.webp';
 import { Image } from 'react-bootstrap';
 import '../assets/styles/Header.css';
+import { CartContext } from '../utils/context/CartContext';
 
-function Header({cart}) {
+function Header() {
+  const { cart } = useContext(CartContext);
+  
   return (
     <header>
       <Navbar expand="lg" bg="body-tertiary">
@@ -24,7 +27,7 @@ function Header({cart}) {
                 <NavLink className="nav-link" to="/about">A propos</NavLink>
               </Nav.Item>
               <Nav.Item>
-                <NavLink className="nav-link" to="/cart">Panier ({cart.length}) </NavLink>
+                <NavLink className="nav-link" to="/cart">Panier ({cart.reduce((total, item) => total + item.quantity, 0)}) </NavLink>
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>
