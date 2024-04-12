@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import Card from '../components/Card';
 import dishesData from '../datas/dishes.json';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
   const [showNewOnly, setShowNewOnly] = useState(false);
@@ -21,6 +22,9 @@ const Home = () => {
   return (
     <div>
       <Container>
+        <Helmet>
+        <title>Accueil - Mexican Food</title>
+        </Helmet>
         <Button onClick={handleShowNewOnly} className="mb-3">
           {showNewOnly ? "Voir tous les plats" : "Nouveautés uniquement"}
         </Button>

@@ -1,10 +1,14 @@
 
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap'; 
+import { Helmet } from 'react-helmet-async';
 
 const About = () => {
   return (
     <Container>
+      <Helmet>
+        <title>À propos - Mexican Food</title>
+      </Helmet>
       <Row>
         <Col>
           <h1>A propos</h1>

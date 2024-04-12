@@ -4,6 +4,7 @@ import { Container, Row, Button } from 'react-bootstrap';
 import dishesData from '../datas/dishes.json';
 import NotFound from './NotFound';
 import { CartContext } from "../utils/context/CartContext.jsx";
+import { Helmet } from 'react-helmet-async';
 
 const Dishdetails = () => {
   const { slug } = useParams();
@@ -23,6 +24,9 @@ const Dishdetails = () => {
 
   return (
     <Container>
+      <Helmet>
+        <title>À propos - Mexican Food</title>
+      </Helmet>
       <Row>
         {selectedDish ? (
           <>

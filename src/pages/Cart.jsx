@@ -3,6 +3,7 @@ import { Container, Table } from 'react-bootstrap';
 import { CartContext } from '../utils/context/CartContext';
 import useTotalCartAmount from '../utils/hook/useTotalCartAmount';
 import useTotalItemsInCart from '../utils/hook/useTotalItemInCart';
+import { Helmet } from 'react-helmet-async';
 
 const Cart = () => {
     const { cart } = useContext(CartContext);
@@ -21,6 +22,9 @@ const Cart = () => {
 
     return (
         <Container>
+            <Helmet>
+                <title>Panier - Mexican Food</title>
+            </Helmet>
             <h1>Panier</h1>
             <p>Total Panier : {totalAmount}€</p>
             <p>Objet dans le panier : {totalItemsInCart}  </p>

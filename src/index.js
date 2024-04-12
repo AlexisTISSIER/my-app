@@ -1,18 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {CartProvider} from './utils/context/CartContext';
+import { CartProvider } from './utils/context/CartContext';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-root.render(
+ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-     <CartProvider>
-        <App />
-      </CartProvider>
+      <HelmetProvider>
+        <CartProvider>
+          <App />
+        </CartProvider>
+      </HelmetProvider>
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
+
