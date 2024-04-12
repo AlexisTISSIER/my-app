@@ -24,12 +24,12 @@ const Dishdetails = () => {
 
   return (
     <Container>
-      <Helmet>
-        <title>À propos - Mexican Food</title>
-      </Helmet>
       <Row>
         {selectedDish ? (
           <>
+            <Helmet>
+              <title> {selectedDish.name} - Mexican Food</title>
+            </Helmet>
             <div className="dishdetails">
               <div>
                 <h1>{selectedDish.name}</h1>

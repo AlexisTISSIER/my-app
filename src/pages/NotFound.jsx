@@ -8,8 +8,8 @@ const NotFound = () => {
   return (
     <Container>
       <Helmet>
-        <title>Page Non Trouver</title>
-        </Helmet>
+        <title>Page Non Trouvée</title>
+      </Helmet>
       <Row>
         <h1>Page non trouvée</h1> {}
       </Row>
