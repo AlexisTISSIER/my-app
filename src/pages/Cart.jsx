@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import { Container, Table } from 'react-bootstrap';
 import { CartContext } from '../utils/context/CartContext';
+import useTotalCartAmount from '../utils/hook/useTotalCartAmount';
 
 const Cart = () => {
     const { cart } = useContext(CartContext);
+    const totalAmount = useTotalCartAmount(cart);
 
     const columns = cart.map((item, index) => (
         <td key={index}>
@@ -18,6 +20,7 @@ const Cart = () => {
     return (
         <Container>
             <h1>Panier</h1>
+            <p>Total Panier: {totalAmount}€</p>
             <Table striped bordered hover>
                 <thead>
                     <tr>
